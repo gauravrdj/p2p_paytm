@@ -1,7 +1,7 @@
 const mongoose=require('mongoose');
 // const { Schema } = require('zod');
-
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true });
+let connectionString =  process.env.DATABASE_URL;
+mongoose.connect(connectionString);
 
 const userSchema=new mongoose.Schema({
     username: {
