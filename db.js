@@ -1,7 +1,7 @@
 const mongoose=require('mongoose');
 // const { Schema } = require('zod');
 
-mongoose.connect('mongodb+srv://gaurav_rdj:gaurav%402002S@firstcluster.66p7ced.mongodb.net/payTM');
+mongoose.connect(process.env.DATABASE_URL);
 
 const userSchema=new mongoose.Schema({
     username: {
